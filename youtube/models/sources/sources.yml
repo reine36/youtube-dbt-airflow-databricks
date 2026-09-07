@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: rva_bronze
+    catalog: rvadatacatalog
+    schema: rva_bronze
+    tables:
+      - name: aggregated_metrics_by_country_and_subscriber_status
+      - name: aggregated_metrics_by_video
+      - name: all_comments_final
+      - name: video_performance_over_time

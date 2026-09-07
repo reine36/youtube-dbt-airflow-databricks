@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_aggregated_metrics_by_country_and_subscriber_status
+    description: "Staged metrics broken down by country and subscriber status, sanitized and deduplicated."
+    columns:
+      - name: external_video_id
+        description: "Unique identifier for the video."
+        tests:
+          - not_null
+      - name: country_code
+        description: "ISO country code for the viewer location."
+        tests:
+          - not_null
+      - name: is_subscribed
+        description: "Flag indicating if the user was subscribed."
+        tests:
+          - not_null
+
+  - name: stg_aggregated_metrics_by_video
+    description: "Staged high-level video performance and revenue metrics."
+    columns:
+      - name: video_id
+        description: "Unique identifier for the video."
+        tests:
+          - unique
+          - not_null
+      - name: views
+        description: "Total view count."
+        tests:
+          - not_null
+
+  - name: stg_all_comments_final
+    description: "Staged user comments with sanitized text and metadata."
+    columns:
+      - name: comment_id
+        description: "Unique identifier for the comment."
+        tests:
+          - unique
+          - not_null
+      - name: external_video_id
+        description: "Video ID the comment belongs to."
+        tests:
+          - not_null
+
+  - name: stg_video_performance_over_time
+    description: "Staged daily video performance metrics."
+    columns:
+      - name: external_video_id
+        description: "Unique identifier for the video."
+        tests:
+          - not_null
+      - name: performance_date
+        description: "The date of the performance record."
+        tests:
+          - not_null
