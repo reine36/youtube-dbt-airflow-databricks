@@ -1,0 +1,87 @@
+[0m23:14:58.412131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B857E0F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B8571FFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B857E33D0>]}
+
+
+============================== 23:14:58.417874 | 256d6528-3b23-4b36-9c40-6ed521f5a31e ==============================
+[0m23:14:58.417874 [info ] [MainThread]: Running with dbt=1.12.3
+[0m23:14:58.419379 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\reyva\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug --project-dir .', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m23:14:58.453737 [info ] [MainThread]: dbt version: 1.12.3
+[0m23:14:58.454738 [info ] [MainThread]: python version: 3.11.9
+[0m23:14:58.455307 [info ] [MainThread]: python path: C:\Users\reyva\Desktop\airflow_dbt_databrics_youtube\.venv\Scripts\python.exe
+[0m23:14:58.456314 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m23:14:58.462349 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.snowflake'
+[0m23:14:59.622327 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m23:14:59.622327 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m23:14:59.623327 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m23:15:00.803828 [info ] [MainThread]: Using profiles dir at C:\Users\reyva\.dbt
+[0m23:15:00.804333 [info ] [MainThread]: Using profiles.yml file at C:\Users\reyva\.dbt\profiles.yml
+[0m23:15:00.804333 [info ] [MainThread]: Using dbt_project.yml file at .\dbt_project.yml
+[0m23:15:00.805337 [info ] [MainThread]: Configuration:
+[0m23:15:00.805337 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m23:15:00.806335 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:15:00.806335 [info ] [MainThread]: Required dependencies:
+[0m23:15:00.807336 [debug] [MainThread]: Executing "git --help"
+[0m23:15:00.845339 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:15:00.845339 [debug] [MainThread]: STDERR: "b''"
+[0m23:15:00.846344 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:15:00.846344 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m23:15:00.847344 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:15:00.847344 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "airbnb_dbt_snowflake", target "dev" invalid: Runtime Error
+    Could not find adapter type snowflake!
+
+
+[0m23:15:00.848344 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <.\dbt_project.yml> not found
+
+[0m23:15:00.849848 [debug] [MainThread]: Command `dbt debug` failed at 23:15:00.849848 after 2.54 seconds
+[0m23:15:00.849848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B857CF990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B857CF750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B857D6610>]}
+[0m23:15:00.850854 [debug] [MainThread]: Flushing usage events
+[0m23:15:02.262054 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:31:54.485442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBE90850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBDE71D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBDE4790>]}
+
+
+============================== 23:31:54.488442 | 348cb140-cf25-4adb-9275-cdd17eed210f ==============================
+[0m23:31:54.488442 [info ] [MainThread]: Running with dbt=1.12.3
+[0m23:31:54.489755 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\reyva\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt docs generate', 'log_path': 'logs'}
+[0m23:31:54.489755 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\reyva\Desktop\airflow_dbt_databrics_youtube\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:31:54.491761 [debug] [MainThread]: Command `dbt docs generate` failed at 23:31:54.491761 after 0.10 seconds
+[0m23:31:54.491761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBEC1F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBEC29D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FEBDDF190>]}
+[0m23:31:54.492760 [debug] [MainThread]: Flushing usage events
+[0m23:31:55.698514 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:32:05.889274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB634E7550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB634E5050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB634E4090>]}
+
+
+============================== 23:32:05.892297 | 970c466f-11a2-421f-8b0a-4cc8cecbe66c ==============================
+[0m23:32:05.892297 [info ] [MainThread]: Running with dbt=1.12.3
+[0m23:32:05.893297 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\reyva\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt docs generate --profile youtube', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m23:32:05.893297 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\reyva\Desktop\airflow_dbt_databrics_youtube\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:32:05.895110 [debug] [MainThread]: Command `dbt docs generate` failed at 23:32:05.895110 after 0.10 seconds
+[0m23:32:05.895615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB635C6990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB635C5F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB634F3FD0>]}
+[0m23:32:05.895615 [debug] [MainThread]: Flushing usage events
+[0m23:32:07.050444 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:32:14.640948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027342CF5A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027342CF6ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027342CF5B10>]}
+
+
+============================== 23:32:14.644403 | db8bbb19-64c3-4662-bcd9-e5f5d533a8d9 ==============================
+[0m23:32:14.644403 [info ] [MainThread]: Running with dbt=1.12.3
+[0m23:32:14.645410 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\reyva\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt docs generate --profile youtube --no-partial-parse', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m23:32:14.646410 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\reyva\Desktop\airflow_dbt_databrics_youtube\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:32:14.647409 [debug] [MainThread]: Command `dbt docs generate` failed at 23:32:14.647409 after 0.09 seconds
+[0m23:32:14.647409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027342CF5A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027342C0F450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027342C0F890>]}
+[0m23:32:14.648410 [debug] [MainThread]: Flushing usage events
+[0m23:32:15.793780 [debug] [MainThread]: An error was encountered while trying to flush usage events

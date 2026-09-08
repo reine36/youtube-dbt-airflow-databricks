@@ -12,3 +12,9 @@ pip install apache-airflow apache-airflow-providers-amazon apache-airflow-provid
 This project uses csv files from s3, ingested into bronze in databricks with autoloader. Performed transformation using DBT to give silver and gold tables. Orchestrated using Airflow local via docker.
 
 -->if u want to use requirements.txt just use uv pip freeze > requirements.txt
+
+
+FOR DOCUMENTATION JUST RUN THIS
+Set-Location "C:\Users\reyva\Desktop\airflow_dbt_databrics_youtube\youtube"
+dbt docs generate --profile youtube --no-partial-parse
+dbt docs serve --profile youtube --port 8081
